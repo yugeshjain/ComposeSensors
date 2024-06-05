@@ -3,6 +3,7 @@ import java.util.Properties
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
 }
 
 android {
@@ -59,9 +60,6 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -70,11 +68,11 @@ android {
 }
 
 dependencies {
-    val composeVersion = "1.6.4"
+    val composeVersion = "1.6.7"
     val material3Version = "1.2.1"
-    val lifecycleRuntimeKtxVersion = "2.7.0"
-    val coreKtxVersion = "1.12.0"
-    val activityComposeVersion = "1.8.2"
+    val lifecycleRuntimeKtxVersion = "2.8.1"
+    val coreKtxVersion = "1.13.1"
+    val activityComposeVersion = "1.9.0"
     val jUnitVersion = "4.13.2"
     val androidJUnitVersion = "1.1.5"
     val espressoVersion = "3.5.1"
